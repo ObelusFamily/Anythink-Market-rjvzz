@@ -12,4 +12,4 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 
 **[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
 
-If the "docker-compose up" fails with the backend because it can't cd to backend, check in Docker Desktop un Settings -> Resources -> File Sharing. Only the folder of this project should be listed.  
+If the "docker-compose up" fails with the backend because it can't cd to backend, check in Docker Desktop un Settings -> Resources -> File Sharing. Only the folder of this project should be listed.
