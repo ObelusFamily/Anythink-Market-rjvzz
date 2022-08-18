@@ -104,6 +104,7 @@ class ItemsRepository(BaseRepository):  # noqa: WPS214
         self,
         *,
         tag: Optional[str] = None,
+        title: Optional[str] = None,
         seller: Optional[str] = None,
         favorited: Optional[str] = None,
         limit: int = 20,
@@ -155,6 +156,15 @@ class ItemsRepository(BaseRepository):  # noqa: WPS214
                     )
                 ),
             )
+            # fmt: on
+
+        if title:
+            query_params.append(f'%{title}%')
+            query_params_count += 1
+
+            # fmt: off
+            query = query.select(query.star).where(items.title.like(Parameter(query_params_count)))
+
             # fmt: on
 
         if seller:
